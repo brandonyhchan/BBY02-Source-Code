@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>BBY-02 App Login</title>
+    <title>BBY-02 App Landing Page</title>
     <meta name="comp1800 template" content="BBY-02 COMP1800 app">
 
     <!------------------------>
@@ -43,16 +43,27 @@
     <!-- Your HTML Layout go here -->
     <!------------------------------>
 
-    <!-- No navbar needed for login page -->
-    <nav class="navbar navbar-light bg-info px-4 pt-5">
-
+    <!-- Need to create new navbar with back and home buttons -->
+    <nav class="navbar navbar-light bg-info">
+        <a id="navhome" href="main.html" i class="material-icons md-36">home</i></a>
     </nav>
-  
+
     <!-- the body of your page goes here -->
-    
-    <div id="loader">Loading...Please wait</div>
-    
-    <div id="firebaseui-auth-container"></div>
+    <div class="container">
+        <a class="events-card" href="index.html">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Title</h5>
+                    <div class="card-info">
+                        <img class="card-image" src="images/placeholder.png" alt="placeholder">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
 
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>
