@@ -43,37 +43,27 @@
     <!-- Your HTML Layout go here -->
     <!------------------------------>
 
-    <!-- Navbar, incl search bar for homepage, Brandon Feb 27 -->
+    <!-- Need to create new navbar with back and home buttons -->
     <nav class="navbar navbar-light bg-info">
-        <form class="container-fluid">
-            <div class="input-group">
-                <input type="text" class="form-control mdl-textfield--align-right" placeholder="Search"
-                    aria-label="Searchbar" aria-describedby="basic-addon1"> &ensp;
-                <button type="button" class="btn btn-outline-light btn-floating"><i
-                        class="material-icons md-36">search</i></button>
-            </div>
-        </form>
+        <a id="navhome" href="main.html" i class="material-icons md-36">arrow_back</i></a>
+        <a id="navhome" href="main.html" i class="material-icons md-36">home</i></a>
     </nav>
 
     <!-- the body of your page goes here -->
-    <div class="card text-center">
-        <div class="card-body">
-            <h1>Events Today</h1>
-        </div>
-    </div>
-
-    <a class="homepage-cards" href="upcoming events.html">
-        <div class="card text-center">
-            <div class="card-body">
-                <h1>Upcoming Events</h1>
+    <div class="container">
+        <a class="events-card" href="index.html">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Title</h5>
+                    <div class="card-info">
+                        <img class="card-image" src="images/placeholder.png" alt="placeholder">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </a>
-
-    <div class="card text-center">
-        <div class="card-body ">
-            <h1> Highlights of the Day</h1>
-        </div>
+        </a>
     </div>
 
     <!-- our own footer goes here-->

@@ -43,36 +43,22 @@
     <!-- Your HTML Layout go here -->
     <!------------------------------>
 
-    <!-- Navbar, incl search bar for homepage, Brandon Feb 27 -->
+    <!-- Need to create new navbar with back and home buttons -->
     <nav class="navbar navbar-light bg-info">
-        <form class="container-fluid">
-            <div class="input-group">
-                <input type="text" class="form-control mdl-textfield--align-right" placeholder="Search"
-                    aria-label="Searchbar" aria-describedby="basic-addon1"> &ensp;
-                <button type="button" class="btn btn-outline-light btn-floating"><i
-                        class="material-icons md-36">search</i></button>
-            </div>
-        </form>
+        <a id="navhome" href="main.html" i class="material-icons md-36">arrow_back</i></a>
     </nav>
 
     <!-- the body of your page goes here -->
-    <div class="card text-center">
-        <div class="card-body">
-            <h1>Events Today</h1>
-        </div>
-    </div>
-
-    <a class="homepage-cards" href="upcoming events.html">
-        <div class="card text-center">
+    <div class="container">
+        <div class="card">
             <div class="card-body">
-                <h1>Upcoming Events</h1>
+                <h5 class="card-title">Title</h5>
+                <div id="upcoming-gallery">
+                    <img class="upcoming-image" src="images/placeholder.png" alt="placeholder">
+                    <img class="upcoming-image" src="images/placeholder.png" alt="placeholder">
+                    <img class="upcoming-image" src="images/placeholder.png" alt="placeholder">
+                </div>
             </div>
-        </div>
-    </a>
-
-    <div class="card text-center">
-        <div class="card-body ">
-            <h1> Highlights of the Day</h1>
         </div>
     </div>
 
