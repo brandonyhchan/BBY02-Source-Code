@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Events
+        </title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+
+            body{
+                font-family: 'titillium web';
+            }
+            .mainpart{
+                display: grid;
+                grid-template-columns: 5% 90% 5%;
+                grid-template-rows: 5% 90% 5%;
+            }
+
+            .namepart{
+                display:grid;
+                grid-column: 2 / span 1;
+                grid-row: 2/ span 1;
+                background-color: rgb(241, 241, 241);
+                grid-template-columns: 60% 40%;
+                grid-template-rows: 30% 70%;
+            }
+            .eventname{
+                display: grid;
+                grid-column: 1 / span 1;
+                grid-row: 1/ span 1;
+               
+                        }
+            .eventpic{
+                display: grid;
+                grid-column: 2 / span 1;
+                grid-row: 1/ span 1;
+                }
+                
+            .participantname{
+                display: grid;
+                grid-column: 1 / span 2;
+                grid-row: 2/ span 1;
+                border-top:rgb(185, 185, 185) double 7px;
+                
+                
+            }
+
+            .namecard{
+                display: grid;
+                height: 100px;
+                width: 1500px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: -490px;
+                background-color: white;
+                border-radius: 50px;
+                grid-template-columns: 20% 35% 45% ;
+                grid-template-rows: 5% 90% 5%;
+            }
+
+            .namecard:hover{
+                background-image: url("https://c.tenor.com/arZ8iEZKo6AAAAAM/canada-canadian-flag.gif");
+                background-position: center;
+                opacity: 0.50;
+                background-size: 400px;
+
+            }
+
+            .nameimg{
+                grid-column: 1 / span 1;
+                grid-row: 2/ span 1;
+            }
+
+            #nameimg{
+                display: grid;
+                height: 90px;
+                width: 90px;
+                margin-left: 70px;
+                border-radius: 100px;
+            }
+
+            .namedetails{
+                display: grid;
+                grid-column: 2 / span 1;
+                grid-row: 2/ span 1;
+                margin-top: -25px;
+                font-size: 40px;
+            }
+            .eventspecs{
+                font-size:60px;
+                margin-left: 30px;
+
+            }
+
+            .time{
+                font-size:35px;
+                margin-left: 30px;
+                margin-top: -120px;
+            }
+            .venue{
+                font-size:35px;
+                margin-left: 30px;
+                margin-top: -130px;
+            }
+
+            a:link{
+                color: black;
+                text-decoration: none;
+            }
+            a:visited{
+                color:black
+            }
+
+            .skiimage{
+                height: 250px;
+                width:auto;
+                margin-top: auto;
+                background-color: white;
+                margin-bottom: auto;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 40px;
+                border: ridge 3px rgb(185, 185, 185);
+                border-radius: 100px;
+                
+            }
+
+            .reminder{
+                margin-top: -120px;
+                height: 50px;
+                margin-left: 30px;
+            }
+
+            .athletedetails{
+                display: grid;
+                grid-column: 3 / span 1;
+                grid-row: 2/ span 1;
+                grid-template-columns: 50% 50% ;
+                grid-template-rows: 100%;
+            }
+            .name{
+                font-size: 50px;
+                margin-left: 30px;
+                margin-top: 0px;
+            }
+
+            .Country{
+                grid-column: 1 / span 1;
+                grid-row: 1/ span 1;
+                margin-top: 23px;
+                margin-left: -40px;
+                font-size: 30px;
+            }
+
+            .age{
+                grid-column: 2 / span 1;
+                grid-row: 1/ span 1;
+                margin-top: 27px;
+                font-size: 25px;
+            }
+        </style>
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="mainpart">
+            <div class="namepart"><br><br><br><br><br><br><br><br><br>
+                
+                
+                
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br>
+                <div class="eventname"><p class="eventspecs"><b>FREESTYLE SKIING</b></p>
+                <p class="time"><b>11:00 PST</b></p>
+                <p class="venue"><a class="cypress" href="https://www.google.com/maps/place/Cypress+Mountain/@49.396018,-123.204545,15z/data=!4m2!3m1!1s0x0:0x821712a6c6d32ff3?sa=X&ved=2ahUKEwjVl7r1xab2AhX0On0KHSOSD08Q_BJ6BAhOEAU"><b>Cypress Mountain</b></a></p>
+                <img class="reminder" src="./images/reminder.png">
+                </div>
+                <div class="eventpic"><img class="skiimage" src="./images/Skiing.png"></div>
+                <a class="participantname" href="">
+                    <p class="name"><b>Participants</b></p>
+                    <div class="namecard">
+                        <div class="nameimg"><img id="nameimg" src="./images/nameimg.jpg"> </div>
+                        <div class="namedetails"><p class="athletename"><b>Brady Leman</b></p></div>
+                        <div class="athletedetails">
+                            
+                            <p class="Country"><b>Canada</b></p>
+                            <p class="age"><b>Age: 35</b></p>
+                            
+                        </b>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            </div>
+    </body>
+</html>
