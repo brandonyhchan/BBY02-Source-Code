@@ -1,200 +1,211 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Events
-        </title>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
 
-            body{
-                font-family: 'titillium web';
-            }
-            .mainpart{
-                display: grid;
-                grid-template-columns: 5% 90% 5%;
-                grid-template-rows: 5% 90% 5%;
-            }
+<head>
+    <title>
+        Events
+    </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
 
-            .namepart{
-                display:grid;
-                grid-column: 2 / span 1;
-                grid-row: 2/ span 1;
-                background-color: rgb(241, 241, 241);
-                grid-template-columns: 60% 40%;
-                grid-template-rows: 50% 50%;
-            }
-            .eventname{
-                display: grid;
-                grid-column: 1 / span 1;
-                grid-row: 1/ span 1;
-               
-                        }
-            .eventpic{
-                display: grid;
-                grid-column: 2 / span 1;
-                grid-row: 1/ span 1;
-                }
-                
-            .participantname{
-                display: grid;
-                grid-column: 1 / span 2;
-                grid-row: 2/ span 1;
-                
-                
-                
-            }
+        body {
+            font-family: 'titillium web';
+        }
 
-            .namecard{
-                display: grid;
-                height: 100px;
-                width: 1500px;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: -490px;
-                background-color: white;
-                border-radius: 50px;
-                grid-template-columns: 20% 35% 45% ;
-                grid-template-rows: 5% 90% 5%;
-            }
+        .mainpart {
+            display: grid;
+            grid-template-columns: 5% 90% 5%;
+            grid-template-rows: 5% 90% 5%;
+        }
 
-            .namecard:hover{
-                background-image: url("https://c.tenor.com/arZ8iEZKo6AAAAAM/canada-canadian-flag.gif");
-                background-position: center;
-                opacity: 0.50;
-                background-size: 400px;
+        .namepart {
+            display: grid;
+            grid-column: 2 / span 1;
+            grid-row: 2/ span 1;
+            background-color: rgb(241, 241, 241);
+            grid-template-columns: 60% 40%;
+            grid-template-rows: 50% 50%;
+        }
 
-            }
+        .eventname {
+            display: grid;
+            grid-column: 1 / span 1;
+            grid-row: 1/ span 1;
 
-            .nameimg{
-                grid-column: 1 / span 1;
-                grid-row: 2/ span 1;
-            }
+        }
 
-            #nameimg{
-                display: grid;
-                height: 90px;
-                width: 90px;
-                margin-left: 70px;
-                border-radius: 100px;
-            }
+        .eventpic {
+            display: grid;
+            grid-column: 2 / span 1;
+            grid-row: 1/ span 1;
+        }
 
-            .namedetails{
-                display: grid;
-                grid-column: 2 / span 1;
-                grid-row: 2/ span 1;
-                margin-top: -25px;
-                font-size: 40px;
-            }
-            .eventspecs{
-                font-size:60px;
-                margin-left: 30px;
+        .participantname {
+            display: grid;
+            grid-column: 1 / span 2;
+            grid-row: 2/ span 1;
 
-            }
 
-            .time{
-                font-size:35px;
-                margin-left: 30px;
-                margin-top: -120px;
-            }
-            .venue{
-                font-size:35px;
-                margin-left: 30px;
-                margin-top: -130px;
-            }
 
-            a:link{
-                color: black;
-                text-decoration: none;
-            }
-            a:visited{
-                color:black
-            }
+        }
 
-            .skiimage{
-                height: 250px;
-                width:auto;
-                margin-top: 100px;
-                background-color: white;
-                margin-bottom: auto;
-                
-                margin-right: 50px;
-                padding: 40px;
-                border: ridge 3px rgb(185, 185, 185);
-                border-radius: 100px;
-                
-            }
+        .namecard {
+            display: grid;
+            height: 100px;
+            width: 1500px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -490px;
+            background-color: white;
+            border-radius: 50px;
+            grid-template-columns: 20% 35% 45%;
+            grid-template-rows: 5% 90% 5%;
+        }
 
-            .reminder{
-                margin-top: -120px;
-                height: 50px;
-                margin-left: 30px;
-            }
+        .namecard:hover {
+            background-image: url("https://c.tenor.com/arZ8iEZKo6AAAAAM/canada-canadian-flag.gif");
+            background-position: center;
+            opacity: 0.50;
+            background-size: 400px;
 
-            .athletedetails{
-                display: grid;
-                grid-column: 3 / span 1;
-                grid-row: 2/ span 1;
-                grid-template-columns: 50% 50% ;
-                grid-template-rows: 100%;
-            }
-            .name{
-                font-size: 50px;
-                margin-left: 30px;
-                margin-top: 0px;
-                border-top: 3px dashed rgb(185, 185, 185);
-            }
+        }
 
-            .Country{
-                grid-column: 1 / span 1;
-                grid-row: 1/ span 1;
-                margin-top: 23px;
-                margin-left: -40px;
-                font-size: 30px;
-            }
+        .nameimg {
+            grid-column: 1 / span 1;
+            grid-row: 2/ span 1;
+        }
 
-            .age{
-                grid-column: 2 / span 1;
-                grid-row: 1/ span 1;
-                margin-top: 27px;
-                font-size: 25px;
-            }
+        #nameimg {
+            display: grid;
+            height: 90px;
+            width: 90px;
+            margin-left: 70px;
+            border-radius: 100px;
+        }
 
-            .favouriteicon{
-                height: 30px;
-                margin-left: 30px;
-                margin-top: -130px;
-            }
-        </style>
-        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <div class="mainpart">
-            <div class="namepart"><br><br><br><br><br><br><br><br><br>
-                
-                
-                
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br><br><br><br><br>
-                <div class="eventname"><p class="eventspecs"><b>Brady Leman</b></p>
+        .namedetails {
+            display: grid;
+            grid-column: 2 / span 1;
+            grid-row: 2/ span 1;
+            margin-top: -25px;
+            font-size: 40px;
+        }
+
+        .eventspecs {
+            font-size: 60px;
+            margin-left: 30px;
+
+        }
+
+        .time {
+            font-size: 35px;
+            margin-left: 30px;
+            margin-top: -120px;
+        }
+
+        .venue {
+            font-size: 35px;
+            margin-left: 30px;
+            margin-top: -130px;
+        }
+
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: black
+        }
+
+        .skiimage {
+            height: 250px;
+            width: auto;
+            margin-top: 100px;
+            background-color: white;
+            margin-bottom: auto;
+
+            margin-right: 50px;
+            padding: 40px;
+            border: ridge 3px rgb(185, 185, 185);
+            border-radius: 100px;
+
+        }
+
+        .reminder {
+            margin-top: -120px;
+            height: 50px;
+            margin-left: 30px;
+        }
+
+        .athletedetails {
+            display: grid;
+            grid-column: 3 / span 1;
+            grid-row: 2/ span 1;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 100%;
+        }
+
+        .name {
+            font-size: 50px;
+            margin-left: 30px;
+            margin-top: 0px;
+            border-top: 3px dashed rgb(185, 185, 185);
+        }
+
+        .Country {
+            grid-column: 1 / span 1;
+            grid-row: 1/ span 1;
+            margin-top: 23px;
+            margin-left: -40px;
+            font-size: 30px;
+        }
+
+        .age {
+            grid-column: 2 / span 1;
+            grid-row: 1/ span 1;
+            margin-top: 27px;
+            font-size: 25px;
+        }
+
+        .favouriteicon {
+            height: 30px;
+            margin-left: 30px;
+            margin-top: -130px;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="mainpart">
+        <div class="namepart"><br><br><br><br><br><br><br><br><br>
+
+
+
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br>
+            <div class="eventname">
+                <p class="eventspecs"><b>Brady Leman</b></p>
                 <p class="time"><b>Canada</b></p>
                 <p class="time"><b>Freestyle Skiing</b></p>
                 <p class="time"><b>Age: 35 </b></p>
                 <p class="time"><b>Height: 1.84 m</b></p>
                 <img class="favouriteicon" src="./images/Favourite.png">
-                
-                
-                </div>
-                <div class="eventpic"><img class="skiimage" src="./images/nameimg.jpg"></div>
-                <a class="participantname" href="">
-                    <p class="name"><b>Previous Records</b></p>
 
-                            
-                        
-                        </div>
-                    </div>
-                </a>
+
             </div>
-            </div>
-    </body>
+            <div class="eventpic"><img class="skiimage" src="./images/nameimg.jpg"></div>
+            <a class="participantname" href="">
+                <p class="name"><b>Previous Records</b></p>
+
+
+
+        </div>
+    </div>
+    </a>
+    </div>
+    </div>
+</body>
+
 </html>
