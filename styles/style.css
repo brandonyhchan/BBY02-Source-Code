@@ -73,3 +73,7 @@ h1{
     text-decoration: none;
     color:black;
 }
+
+a.events-card{
+    text-decoration:none;
+}

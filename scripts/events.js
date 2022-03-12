@@ -53,4 +53,31 @@ function writeEvents() {
     });
 }
 
-// writeEvents();
+function read_display_Sport() {
+    db.collection("Events").doc("0caxgQuQCVRR4SnZxIIB")                                                      
+        .onSnapshot(FigSkateDoc => {                                                              
+            console.log("current document data: " + FigSkateDoc.data());                         
+            document.getElementById("sport").innerHTML = FigSkateDoc.data().Sport;
+        })
+}
+read_display_Sport();
+
+function read_display_Event() {
+    db.collection("Events").doc("0caxgQuQCVRR4SnZxIIB")                                                      
+        .onSnapshot(FigSkateDoc => {                                                              
+            console.log("current document data: " + FigSkateDoc.data());                         
+            document.getElementById("event").innerHTML = FigSkateDoc.data().Event;
+        })
+}
+
+function read_display_Location() {
+    db.collection("Events").doc("0caxgQuQCVRR4SnZxIIB")                                                  
+        .onSnapshot(FigSkateDoc => {                                                             
+            console.log("current document data: " + FigSkateDoc.data());                        
+            document.getElementById("location").innerHTML = FigSkateDoc.data().Location;
+        })
+}
+
+read_display_Sport();
+read_display_Event();
+read_display_Location();
