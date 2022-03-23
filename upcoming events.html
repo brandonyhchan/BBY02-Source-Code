@@ -30,6 +30,9 @@
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
     <!-------------------------------------------->
     <!-- Other libraries and styles of your own -->
     <!-------------------------------------------->
@@ -39,31 +42,108 @@
 </head>
 
 <body>
-    <!------------------------------>
-    <!-- Your HTML Layout go here -->
-    <!------------------------------>
-
-    <!-- Need to create new navbar with back and home buttons -->
-    <nav class="navbar navbar-light bg-info">
-        <a id="navhome" href="main.html" i class="material-icons md-36">arrow_back</i></a>
-    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary text-white">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+      
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navbar brand -->
+            <a class="navbar-brand mt-2 mt-lg-0" href="#">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+                height="15"
+                alt="MDB Logo"
+                loading="lazy"
+              />
+            </a>
+            &ensp;&ensp;
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                <li class="nav-item">
+                    <a class="nav-link" href="./main copy.html">Home</a>
+                  </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="./Athletes.html">Athlete</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./favourites.html">Favourite</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Calender</a>
+              </li>
+            </ul>
+    
+           
+            <!-- Left links -->
+          </div>
+    
+          <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          
+      </nav>
 
     <!-- the body of your page goes here -->
     <div class="container">
-        <div class="card">
+      <div class="card" style="width:100%">
+        <h2 style="text-align:center; margin-top:2%;">EVENTS TOMORROW</h2>
+        <hr>
+        <div class="card-deck" >
+          <div class="card ml-5 mb-4 mt-0">
+            <a href="./events.html">
+            <img src="./images/320x180.png" class="card-img-top" alt="..."></a>
             <div class="card-body">
-                <h5 class="card-title">Title</h5>
-                <div id="upcoming-gallery">
-                    <img class="upcoming-image" src="images/placeholder.png" alt="placeholder">
-                    <img class="upcoming-image" src="images/placeholder.png" alt="placeholder">
-                    <img class="upcoming-image" src="images/placeholder.png" alt="placeholder">
-                </div>
+              <h4 class="card-title">Card title</h4>
+              <h6 class="card-text mt-4 text-center">Date: Jan 20, 2030<br>Time: 10:30 AM PST<br>Location:<a href="https://www.google.com/maps/dir/49.1679596,-122.9056939/cypress+mountain+skiing+venue+for+olympics/@49.2713455,-123.1891825,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x548660d698f59675:0x821712a6c6d32ff3!2m2!1d-123.204545!2d49.396018"> Cypress Mountain</a>
+                <br>Capacity: 8000</h6>
+
             </div>
+          </div>
+          <a href="./events.html"></a>
+          <div class="card mb-4 mt-0">
+            <a href="./events.html">
+              <img src="./images/320x180.png" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-text mt-4 text-center">Date: Jan 20, 2030<br>Time: 10:30 AM PST<br>Location:<a href="https://www.google.com/maps/dir/49.1679596,-122.9056939/cypress+mountain+skiing+venue+for+olympics/@49.2713455,-123.1891825,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x548660d698f59675:0x821712a6c6d32ff3!2m2!1d-123.204545!2d49.396018"> Cypress Mountain</a>
+                <br>Capacity: 8000</h6>
+
+            </div>
+          </div>
+          <a href="./events.html"></a>
+          <div class="card mr-5 mb-4 mt-0" >
+            <a href="./events.html">
+              <img src="./images/320x180.png" class="card-img-top" alt="..."></a>
+              <a href="./events.html">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-text mt-4 text-center">Date: Jan 20, 2030<br>Time: 10:30 AM PST<br>Location:<a href="https://www.google.com/maps/dir/49.1679596,-122.9056939/cypress+mountain+skiing+venue+for+olympics/@49.2713455,-123.1891825,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x548660d698f59675:0x821712a6c6d32ff3!2m2!1d-123.204545!2d49.396018"> Cypress Mountain</a>
+                <br>Capacity: 8000</h6>
+            </div>
+            
+          </div>
+          
         </div>
+       
+    </div>
     </div>
 
     <!-- our own footer goes here-->
-    <nav id="footerPlaceholder"></nav>
+
 
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
@@ -72,6 +152,7 @@
     <script src="./scripts/skeleton.js"></script>
     <script src="./scripts/script.js"></script>
     <script src="./scripts/authentication.js"></script>
+    <script src="./scripts/athletes.js"></script>
     <!-- <script src="./scripts/script.js"></script> -->
 
 </body>
