@@ -36,6 +36,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
 </head>
 
 <body>
@@ -44,29 +47,77 @@
     <!------------------------------>
 
     <!-- Header size increased -->
-    <nav class="navbar navbar-light bg-info">
-        <a id="navhome" href="main.html" i class="material-icons md-36">arrow_back</i></a>
-    </nav>
-    <!-- Athletes Page by Howard Lai -->
-    <div class="container">
-        <a class="events-card" href="NamesPage.html">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Athlete Name</h5>
-                    <div class="card-info">
-                        <img class="card-image" src="./images/500.png" alt="placeholder">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                    </div>
-                </div>
-            </div>
-        </a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary text-white">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+      
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navbar brand -->
+            <a class="navbar-brand mt-2 mt-lg-0" href="#">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+                height="15"
+                alt="MDB Logo"
+                loading="lazy"
+              />
+            </a>
+            &ensp;&ensp;
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                <li class="nav-item">
+                    <a class="nav-link" href="./main copy.html">Home</a>
+                  </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="./Athletes.html">Athlete</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./favourites.html">Favourite</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Calender</a>
+              </li>
+            </ul>
+    
+           
+            <!-- Left links -->
+          </div>
+    
+          <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          
+      </nav>
+
+<section class="home">
+  <div class="card mb-3 col-md-8" style="height:auto; width:80%;">
+    <div class="row no-gutters" >
+      <div class="col-md-3">
+        <img src="./images/nameimg.jpg" class="card-img"  alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title text-center">BRAD LEEMAN</h5>
+          <p class="card-text">Country: Canada<br>Age: 35<br>Height: 1.84 m</p>
+          <p class="card-text"><small class="text-muted">Freestyle Skiing</small></p>
+        </div>
+      </div>
     </div>
-
-
-    <!-- our own footer goes here-->
-    <nav id="footerPlaceholder"></nav>
+  </div>
+</section>
 
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
