@@ -1,24 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title>BBY-02 App HomePage</title>
-    <meta name="comp1800 template" content="BBY-02 COMP1800 app">
+    <title>hello</title>
 
-    <!------------------------>
-    <!-- Required meta tags -->
-    <!------------------------>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!------------------------------------------>
-    <!-- Bootstrap Library CSS JS CDN go here -->
-    <!------------------------------------------>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-        </script>
 
     <!-------------------------------------------------------->
     <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
@@ -34,83 +19,526 @@
     <!-- Other libraries and styles of your own -->
     <!-------------------------------------------->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/Menustyle.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+        @import url("https://fonts.googleapis.com/css2?");
 
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Quicksand", sans-serif;
+
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 62.5%;
+            font-size: 10px;
+            transition: background-color 1.5s, color 1s;
+        }
+
+        /* Navbar section */
+
+        .nav {
+            width: 100%;
+            height: 65px;
+            position: fixed;
+            line-height: 65px;
+            text-align: center;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+
+        .nav div.logo {
+            float: left;
+            width: auto;
+            height: auto;
+            padding-left: 3rem;
+        }
+
+        .nav div.logo a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 2.5rem;
+
+        }
+
+        .nav div.logo a:hover {
+            color: #00E676;
+        }
+
+        .nav div.main_list {
+            height: 65px;
+            float: right;
+        }
+
+        .nav div.main_list ul {
+            width: 100%;
+            height: 65px;
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav div.main_list ul li {
+            width: auto;
+            height: 65px;
+            padding: 0;
+            padding-right: 5rem;
+        }
+
+        .nav div.main_list ul li a {
+            text-decoration: none;
+            color: #fff;
+            line-height: 65px;
+            font-size: 2.4rem;
+        }
+
+        .nav div.main_list ul li a:hover {
+            color: #00E676;
+        }
+
+
+        /* Home section */
+
+        .home {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
+            background-position: center top;
+            background-size: cover;
+            border-bottom-left-radius: 150px;
+        }
+
+        .navTrigger {
+            display: none;
+        }
+
+        .nav {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+        }
+
+
+        /* Media qurey section */
+
+        @media screen and (min-width: 990px) and (max-width: 1024px) {
+            .container {
+                margin: 0;
+            }
+        }
+
+        @media screen and (max-width:990px) {
+            .navTrigger {
+                display: block;
+            }
+
+            .nav div.logo {
+                margin-left: 15px;
+            }
+
+            .nav div.main_list {
+                width: 100%;
+                height: 0;
+                overflow: hidden;
+            }
+
+            .nav div.show_list {
+                height: auto;
+                display: none;
+            }
+
+            .nav div.main_list ul {
+                flex-direction: column;
+                width: 100%;
+                height: 100vh;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                background-color: black;
+                /*same background color of navbar*/
+                background-position: center top;
+            }
+
+            .nav div.main_list ul li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav div.main_list ul li a {
+                text-align: center;
+                width: 100%;
+                font-size: 3rem;
+                padding: 20px;
+            }
+
+            .nav div.media_button {
+                display: block;
+            }
+        }
+
+
+        /* Animation */
+
+        .navTrigger {
+            cursor: pointer;
+            width: 30px;
+            height: 25px;
+            margin: auto;
+            position: absolute;
+            right: 30px;
+            top: 0;
+            bottom: 0;
+        }
+
+        .navTrigger i {
+            background-color: #fff;
+            border-radius: 2px;
+            content: '';
+            display: block;
+            width: 100%;
+            height: 4px;
+        }
+
+        .navTrigger i:nth-child(1) {
+            -webkit-animation: outT 0.8s backwards;
+            animation: outT 0.8s backwards;
+            -webkit-animation-direction: reverse;
+            animation-direction: reverse;
+        }
+
+        .navTrigger i:nth-child(2) {
+            margin: 5px 0;
+            -webkit-animation: outM 0.8s backwards;
+            animation: outM 0.8s backwards;
+            -webkit-animation-direction: reverse;
+            animation-direction: reverse;
+        }
+
+        .navTrigger i:nth-child(3) {
+            -webkit-animation: outBtm 0.8s backwards;
+            animation: outBtm 0.8s backwards;
+            -webkit-animation-direction: reverse;
+            animation-direction: reverse;
+        }
+
+        .navTrigger.active i:nth-child(1) {
+            -webkit-animation: inT 0.8s forwards;
+            animation: inT 0.8s forwards;
+        }
+
+        .navTrigger.active i:nth-child(2) {
+            -webkit-animation: inM 0.8s forwards;
+            animation: inM 0.8s forwards;
+        }
+
+        .navTrigger.active i:nth-child(3) {
+            -webkit-animation: inBtm 0.8s forwards;
+            animation: inBtm 0.8s forwards;
+        }
+
+        @-webkit-keyframes inM {
+            50% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(45deg);
+            }
+        }
+
+        @keyframes inM {
+            50% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(45deg);
+            }
+        }
+
+        @-webkit-keyframes outM {
+            50% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(45deg);
+            }
+        }
+
+        @keyframes outM {
+            50% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(45deg);
+            }
+        }
+
+        @-webkit-keyframes inT {
+            0% {
+                -webkit-transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                -webkit-transform: translateY(9px) rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: translateY(9px) rotate(135deg);
+            }
+        }
+
+        @keyframes inT {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(9px) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(9px) rotate(135deg);
+            }
+        }
+
+        @-webkit-keyframes outT {
+            0% {
+                -webkit-transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                -webkit-transform: translateY(9px) rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: translateY(9px) rotate(135deg);
+            }
+        }
+
+        @keyframes outT {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(9px) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(9px) rotate(135deg);
+            }
+        }
+
+        @-webkit-keyframes inBtm {
+            0% {
+                -webkit-transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                -webkit-transform: translateY(-9px) rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: translateY(-9px) rotate(135deg);
+            }
+        }
+
+        @keyframes inBtm {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-9px) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(-9px) rotate(135deg);
+            }
+        }
+
+        @-webkit-keyframes outBtm {
+            0% {
+                -webkit-transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                -webkit-transform: translateY(-9px) rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: translateY(-9px) rotate(135deg);
+            }
+        }
+
+        @keyframes outBtm {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-9px) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(-9px) rotate(135deg);
+            }
+        }
+
+        .affix {
+            padding: 0;
+            background-color: #111;
+        }
+
+        .myH2 {
+            text-align: center;
+            font-size: 4rem;
+        }
+
+        .myP {
+            text-align: justify;
+            padding-left: 15%;
+            padding-right: 15%;
+            font-size: 20px;
+        }
+
+        @media all and (max-width:700px) {
+            .myP {
+                padding: 2%;
+            }
+        }
+
+
+        button {
+            cursor: pointer;
+            margin-top: 23px;
+            font-size: 2em;
+            text-align: center;
+            background-color: transparent;
+            border: none;
+        }
+
+        .darkmode {
+            color: #dcdcdc;
+            background-color: #222831;
+        }
+
+        i {
+            color: #fff;
+        }
+
+        .darkmode i {
+            color: #2c3036;
+
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/e2a8ef154e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <!------------------------------>
-    <!-- Your HTML Layout go here -->
-    <!------------------------------>
-    <div id="nav">
-        <nav class="navbar navbar-light bg-info">
-            <div id="mySidebar" class="sidebar">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <a href="#">Calender<img class="calender" src="./images/calender.png"></a>
-                <a href="#">Athelete<img class="calender" src="./images/athelete.png"></a>
-                <a href="#">Favourites<img class="favourite" src="./images/heart.png"></a>
-            </div>
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a id="logo" href="#">Our Logo
+            </div></a>
+        </div>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li><a href="#">Athelete</a></li>
+                <li><a href="#">Favourite</a></li>
+                <li><a href="#">Calender</a></li>
+                <li><a href="./searchbar.html">Search</a></li>
+                <li><button class="dark-mode" id="dark-mode-toggle">
+                        <i class="fas fa-adjust"></i>
 
-            <div id="main">
-                <button class="openbtn" onclick="openNav()">☰</button>
-            </div>
+                    </button></li>
+            </ul>
+        </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+        </div>
+    </nav>
 
-            <div id="searchbar">
-                <div class="searchbar navbar-light">
-                    <form class="container-fluid">
-                        <div class="input-group">
-                            <input type="text" class="form-control mdl-textfield--align-right" placeholder="Search"
-                                aria-label="Searchbar" aria-describedby="basic-addon1" id="search">
+    <section class="home">
+    </section>
+    <div style="height:auto;">
+        <!-- just to make scrolling effect possible -->
+        <h2 class="myH2">NEWS</h2>
 
-                            <button type="button" class="btn btn-outline-light btn-floating"
-                                style="margin-left:20px;"><i class="material-icons md-36">search</i></button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </nav>
+        <p class="myP"></p>
+        <p class="myP"></a></p>
+        <p class="myP"></p>
+        <p class="myP"></p>
+        <p class="myP">
+
+        </p>
+
     </div>
 
 
-    <!-- the body of your page goes here -->
-    <a class="homepage-cards" href="EventsToday.html">
-        <div class="card text-center">
-            <div class="card-body">
-                <h1>Events Today</h1>
-            </div>
-        </div>
-    </a>
-
-    <a class="homepage-cards" href="upcoming events.html">
-        <div class="card text-center">
-            <div class="card-body">
-                <h1>Upcoming Events</h1>
-            </div>
-        </div>
-    </a>
-
-    <a class="homepage-cards" href="highlight.html">
-        <div class="card text-center">
-            <div class="card-body ">
-                <h1> Highlights of the Day</h1>
-            </div>
-        </div>
-    </a>
-
-    <h1 id="hi"></h1>
-    <!-- our own footer goes here-->
-    <nav id="footerPlaceholder"></nav>
-
-    <!---------------------------------------------->
-    <!-- Your own JavaScript functions go here    -->
-    <!---------------------------------------------->
+    <!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="./scripts/firebaseAPI_TEAM02.js"></script>
     <script src="./scripts/skeleton.js"></script>
     <script src="./scripts/script.js"></script>
 
 
+    <!-- Function used to shrink nav bar removing paddings and adding black background -->
     <script>
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+
+        $('.navTrigger').click(function () {
+            $(this).toggleClass('active');
+            console.log("Clicked menu");
+            $("#mainListDiv").toggleClass("show_list");
+            $("#mainListDiv").fadeIn();
+
+        });
+
+        let darkMode = localStorage.getItem("darkMode");
+
+        function enableDarkMode() {
+            document.body.classList.add("darkmode");
+            localStorage.setItem("darkMode", "enabled");
+        }
+
+        function disableDarkMode() {
+            document.body.classList.remove("darkmode");
+            localStorage.setItem("darkMode", null);
+        }
+
+        if (darkMode === "enabled") {
+            enableDarkMode();
+        }
+
+        // Listeners
+
+        const darkModeToggle = document.querySelector("#dark-mode-toggle");
+        darkModeToggle.addEventListener("click", () => {
+            darkMode = localStorage.getItem("darkMode");
+            darkMode !== "enabled" ? enableDarkMode() : disableDarkMode();
+        });
+
         function openNav() {
             document.getElementById("mySidebar").style.width = "250px";
             document.getElementById("main").style.marginLeft = "250px";
@@ -121,9 +549,8 @@
             document.getElementById("main").style.marginLeft = "0";
         }
 
-    </script>
-    <!-- <script src="./scripts/script.js"></script> -->
 
+    </script>
 </body>
 
 </html>
