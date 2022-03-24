@@ -95,3 +95,36 @@ function writeAthletes() {
 }
 // writeAthletes();
 
+function displayCards(collection) {
+    let cardTemplate = document.getElementById("AthletesTemplate");
+
+    db.collection(collection).get()
+        .then(snap => {
+            var i = 1;
+            snap.forEach(doc => { 
+                var firstname = doc.data().FirstName;   
+                var lastname = doc.data().LastName;  
+                var country = doc.data().Country; 
+                var events = doc.data().Event;
+                let newcard = cardTemplate.content.cloneNode(true);
+
+                //update title and text and image
+                newcard.querySelector('.card-firstname').innerHTML = firstname;
+                newcard.querySelector('.card-lastname').innerHTML = lastname;
+                newcard.querySelector('.card-country').innerHTML = country;
+                newcard.querySelector('.card-event').innerHTML = events;
+                newcard.querySelector('.card-image').src = "./images/" + firstname + ".png"; //hikes.jpg
+
+                //give unique ids to all elements for future use
+                // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
+                // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
+                // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
+
+                //attach to gallery
+                document.getElementById(collection + "-go-here").appendChild(newcard);
+                i++;
+            })
+        })
+}
+
+displayCards("Athletes");

@@ -1,0 +1,25 @@
+h5{
+    display: inline-block;
+}
+
+.card-image{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.mx-2{
+    display: grid !important;
+    grid-template-columns: 40% 60% !important;
+}
+
+.card-image{
+    display: 1/2;
+}
+
+.card-body{
+    text-align: center; 
+}
+
+#container_{
+    margin: 1%;
+}

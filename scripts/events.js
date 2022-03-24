@@ -70,12 +70,7 @@ function displayCards(collection) {
                 newcard.querySelector('.card-title').innerHTML = sport;
                 newcard.querySelector('.card-event').innerHTML = event;
                 newcard.querySelector('.card-gender').innerHTML = gender;
-                newcard.querySelector('.card-image').src = "./images/" + code + ".png"; //hikes.jpg
-
-                //give unique ids to all elements for future use
-                // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
-                // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
-                // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
+                newcard.querySelector('.card-image').src = "./images/" + code + ".png";
 
                 //attach to gallery
                 document.getElementById(collection + "-go-here").appendChild(newcard);
