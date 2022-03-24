@@ -1,0 +1,29 @@
+img{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+h1{
+    text-align:center;
+    margin:1%;
+}
+
+.mx-2 {
+    display:grid;
+    grid-template-columns: 40% 60%;
+}
+
+.card-body{
+    background-color: #7499C7;
+    color: white;
+    text-align: center;
+}
+
+.card-title{
+    color:white;
+    text-align:center !important;
+}
+
+#container{
+    margin: 1%;
+}
