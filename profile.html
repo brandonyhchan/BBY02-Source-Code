@@ -48,29 +48,24 @@
 
     <!-- the body of your page goes here -->
     <div class="contatiner">
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="./images/500.png" class="img-fluid rounded-start" alt="...">
+        <h1>User Profile </h1>
+        <form>
+            <fieldset class="mb-3" id="personalInfoFields" disabled>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="nameInput" class="form-control" placeholder="name">
                 </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Name</label>
-                            <input type="email" class="form-control form-control-lg" id="exampleFormControlInput1"
-                                placeholder="name">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Email Adress</label>
-                            <input type="email" class="form-control form-control-lg" id="exampleFormControlInput1"
-                                placeholder="name@example.com">
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" id="emailInput" class="form-control" placeholder="name@example.ca">
                 </div>
+            </fieldset>
+            <div class="d-flex justify-content-end mt-5">
+                <button type="button" class="btn btn-secondary" onclick="editUserInfo()">Edit</button>
+                <span style="width: 10px"></span>
+                <button type="button" class="btn btn-info" onclick="saveUserInfo()">Save</button>
             </div>
-        </div>
-    </div>
-    </div>
+        </form>
     </div>
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>
@@ -83,6 +78,7 @@
     <script src="./scripts/script.js"></script>
     <script src="./scripts/authentication.js"></script>
     <script src="./scripts/events.js"></script>
+    <script src="./scripts/profile.js"></script>
     <!-- <script src="./scripts/script.js"></script> -->
 
 </body>

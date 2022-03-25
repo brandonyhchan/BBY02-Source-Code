@@ -13,8 +13,13 @@ function populateInfo() {
                     //get the data fields of the user
                     var userName = userDoc.data().name;
                     var userEmail = userDoc.data().email;
-                    var userAthelete = userDoc.data().athlete;
-                    var userEvent = userDoc.data().event
+
+                    if (userName != null) {
+                        document.getElementById("nameInput").value = userName;
+                    }
+                    if (userEmail != null) {
+                        document.getElementById("emailInput").value = userEmail;
+                    }
                 })
         } else {
             // No user is signed in.
@@ -25,16 +30,22 @@ function populateInfo() {
 }
 populateInfo();
 
-function userFavourites() {
-    userAthlete = document.getElementById('favouriteAthlete').value;
-    userEvent = docuement.getElementById('favouriteEvent').value;
+function editUserInfo() {
+    //Enable the form fields
+    document.getElementById('personalInfoFields').disabled = false;
+}
+
+function saveUserInfo() {
+    userName = document.getElementById('nameInput').value;
+    userEmail = document.getElementById('emailInput').value;
 
     currentUser.update({
-        athlete: userAthlete,
-        event: userEvent
+        name: userName,
+        email: userEmail
     })
         .then(() => {
             console.log("Document successfully updated!");
         })
+    document.getElementById('personalInfoFields').disabled = true;
 
 }
