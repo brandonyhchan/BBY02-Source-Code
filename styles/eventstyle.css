@@ -14,16 +14,17 @@ h1{
 }
 
 .card-body{
-    background-color: #7499C7;
-    color: white;
     text-align: center;
 }
 
 .card-title{
-    color:white;
     text-align:center !important;
 }
 
 #container{
     margin: 1%;
+}
+
+.material-icons{
+    cursor: pointer; 
 }

@@ -1,3 +1,12 @@
+var currentUser;
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        currentUser = db.collection("users").doc(user.uid);
+        console.log(currentUser);
+    }
+
+});
+
 function writeAthletes() {
     var AthletesRef = db.collection("Athletes");
 
@@ -101,10 +110,10 @@ function displayCards(collection) {
     db.collection(collection).get()
         .then(snap => {
             var i = 1;
-            snap.forEach(doc => { 
-                var firstname = doc.data().FirstName;   
-                var lastname = doc.data().LastName;  
-                var country = doc.data().Country; 
+            snap.forEach(doc => {
+                var firstname = doc.data().FirstName;
+                var lastname = doc.data().LastName;
+                var country = doc.data().Country;
                 var events = doc.data().Event;
                 let newcard = cardTemplate.content.cloneNode(true);
 
@@ -113,12 +122,10 @@ function displayCards(collection) {
                 newcard.querySelector('.card-lastname').innerHTML = lastname;
                 newcard.querySelector('.card-country').innerHTML = country;
                 newcard.querySelector('.card-event').innerHTML = events;
-                newcard.querySelector('.card-image').src = "./images/" + firstname + ".png"; //hikes.jpg
+                newcard.querySelector('.card-image').src = "./images/" + firstname + ".png";
 
-                //give unique ids to all elements for future use
-                // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
-                // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
-                // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
+                newcard.querySelector('i').id = 'save-' + firstname;
+                newcard.querySelector('i').onclick = () => favoriteAthlete(firstname);
 
                 //attach to gallery
                 document.getElementById(collection + "-go-here").appendChild(newcard);
@@ -128,3 +135,16 @@ function displayCards(collection) {
 }
 
 displayCards("Athletes");
+
+function favoriteAthlete(firstname) {
+    currentUser.set({
+        favoriteath: firebase.firestore.FieldValue.arrayUnion(firstname)
+    }, {
+        merge: true
+    })
+        .then(function () {
+            console.log("favorite athlete saved for: " + currentUser);
+            var iconID = 'save-' + firstname;
+            document.getElementById(iconID).innerText = 'favorite';
+        });
+}
