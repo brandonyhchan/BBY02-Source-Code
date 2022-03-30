@@ -13,6 +13,7 @@ function populateInfo() {
                     //get the data fields of the user
                     var userName = userDoc.data().name;
                     var userEmail = userDoc.data().email;
+                    var userPhone;
 
                     if (userName != null) {
                         document.getElementById("nameInput").value = userName;
@@ -38,10 +39,13 @@ function editUserInfo() {
 function saveUserInfo() {
     userName = document.getElementById('nameInput').value;
     userEmail = document.getElementById('emailInput').value;
+    userPhone = document.getElementById('phoneInput').value;
+
 
     currentUser.update({
         name: userName,
         email: userEmail
+
     })
         .then(() => {
             console.log("Document successfully updated!");
