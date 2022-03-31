@@ -65,7 +65,7 @@ function populatePage() {
             document.getElementById("silvermedal").innerHTML = description.data().SilverMedals;
             document.getElementById("bronzemedal").innerHTML = description.data().BronzeMedals;
             document.getElementById("image").src = "./images/" + description.data().FirstName + ".png";
-            document.getElementById("flag").src = "./images/" + description.data().Country +".png";
+            document.getElementById("japan").src = "./images/" + description.data().Country +".png";
             document.getElementById("eventpic").src = "./images/" + description.data().ID + ".png";
         })
     } else if (pageName == "Shawn"){

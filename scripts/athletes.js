@@ -2,7 +2,7 @@ var currentUser;
 firebase.auth().onAuthStateChanged(user => {
     if (user) {
         currentUser = db.collection("users").doc(user.uid);
-        console.log(currentUser);
+        // console.log(currentUser);
 
         displayCards("Athletes")
     } else {
@@ -128,10 +128,13 @@ function displayCards(collection) {
                 newcard.querySelector('.card-country').innerHTML = country;
                 newcard.querySelector('.card-event').innerHTML = events;
                 newcard.querySelector('.card-image').src = "./images/" + firstname + ".png";
+                newcard.querySelector('.card-image').onclick = function () {
+                    window.location.href = firstname + ".html";
+                }
 
                 newcard.querySelector('i').id = 'save-' + firstname;
-                newcard.querySelector('i').onclick = () => favoriteAthlete(firstname);
-
+                newcard.querySelector('i').onclick = () => favoriteAthlete(firstname);                
+                
                 //attach to gallery
                 document.getElementById(collection + "-go-here").appendChild(newcard);
                 i++;
@@ -153,5 +156,6 @@ function favoriteAthlete(firstname) {
             var iconID = 'save-' + firstname;
             document.getElementById(iconID).innerText = 'favorite';
         });
+
 }
 
