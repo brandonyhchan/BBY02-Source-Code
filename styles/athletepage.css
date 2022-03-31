@@ -1,0 +1,143 @@
+#container{
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+h2{
+    display:inline-block; 
+}
+
+#basicinfo{
+    text-align: center !important;
+}
+
+#firstname{
+    padding-left: 1.25%;
+    padding-right: 1.25%;
+    padding-top: 10%;
+}
+
+#lastname{
+    padding-left: 1.5%;
+    padding-top: 10%;
+}
+
+#image{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#section1{
+    display: grid !important;
+    grid-template-columns: 50% 50%;
+}
+
+#image{
+    grid-column: 0/1 !important;
+}
+
+#nation{
+    display: flex;
+    justify-content: center; 
+    padding-top: 6%;
+}
+
+#flag{
+    max-width: 20%;   
+    margin-left: auto;  
+}
+
+#country{
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 10%;
+}
+
+#old{
+    padding-top: 6%;
+}
+
+#age{
+    margin: auto;
+    display:inline-block;
+}
+
+#age_{
+    margin: auto;
+    display: inline-block;
+}
+
+#gender{
+    padding-top: 6%;
+}
+
+#section2{
+    padding-top: 5%;
+}
+
+#eventlabel{
+    display:grid;
+    grid-template-columns: 15% 40% 45%;
+}
+
+#sport{
+    text-align: left;
+    margin: auto;
+}
+
+#eventpic{
+    max-width: 90%;
+}
+
+#event{
+    padding-top: 3%;
+    padding-left: 17%;
+}
+
+#records{
+    padding-top: 6%;
+}
+
+#medalsection{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding-top: 3%;
+}
+
+.medalpic{
+    max-width: 15%;
+    display: inline-block;
+}
+
+#goldmed, #silvermed, #bronzemed{
+    display: flex;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%; 
+
+}
+
+.medlabel{
+    display: inline-block;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#goldmedal, #silvermedal, #bronzemedal{
+    display: inline-block;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    
+}
+
+#japan{
+    max-width: 20%;   
+    margin-left: auto;
+    border-style: solid;
+    border-width: 1px;  
+}

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Athletes</title>
+  <title id="pagename">Janice</title>
   <meta name="comp1800 template" content="BBY-02 COMP1800 app">
 
   <!------------------------>
@@ -34,7 +34,7 @@
   <!-- Other libraries and styles of your own -->
   <!-------------------------------------------->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="icon" type="img/x-icon" href="./images/favicon.ico">
+  <link rel="icon" type="img/x-icon" href="../images/favicon.ico">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -42,7 +42,7 @@
   <!-- nav -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <link rel="stylesheet" href="./styles/athletestyle.css">
+  <link rel="stylesheet" href="./styles/athletepage.css">
 
 </head>
 
@@ -50,39 +50,88 @@
   <nav id="navbar"></nav>
 
   <div id="container">
-    <h1>Athletes</h1>
 
     <div class="container align-content-center justify-content-center">
-      <div id="Athletes-go-here" class="row row-cols-auto justify-content-center">
-      </div>
-    </div>
-  </div>
+      <div class="card">
+        <div class="card-body">
+          <div id="section1">
+            <img id="image" src=" " alt=" ">
+            <div id="basicinfo">
+              <h2 id="firstname"></h2>
+              <h2 id="lastname"></h2>
 
-  <template id="AthletesTemplate">
-    <div class="card py-2 mx-2 my-2" style="width:90%;">
-      <img class="card-image" src=" ..." alt="...">
-      <div class="card-body">
-        <h5 class="card-firstname"></h5>
-        <h5 class="card-lastname"></h5>
-        <p class="card-country">Country</p>
-        <p class="card-event">Event</p>
-        <i class="material-icons">favorite_border</i>
+              <div id="nation">
+                <img id="flag" src=" " alt=" ">
+                <h4 id="country"></h4>
+              </div>
+
+              <div id="old">
+                <h4 id="age_">Age:</h4>
+                <h4 id="age"></h4>
+              </div>
+              <h4 id="gender"></h4>
+            </div>
+          </div>
+
+          <div id="section2">
+
+            <div id="eventlabel">
+              <img id="eventpic" src=" " alt="">
+              <h4 id="sport"></h4>
+
+            </div>
+
+            <h4 id="event"></h4>
+
+            <div id="records">
+              <h3 id="recordheading">Previous Records:</h3>
+
+              <div id="medalsection">
+                <div id="goldmed">
+                  <img class="medalpic" src="./images/gold.png" alt="gold">
+                  <h4 class="medlabel">Gold: </h4>
+                  <h4 id="goldmedal"></h4>
+                </div>
+
+                <div id="silvermed">
+                  <img class="medalpic" src="./images/silver.png" alt="silver">
+                  <h4 class="medlabel">Silver: </h4>
+                  <h4 id="silvermedal"></h4>
+                </div>
+
+                <div id="bronzemed">
+                  <img class="medalpic" src="./images/bronze.png" alt="bronze">
+                  <h4 class="medlabel">Bronze: </h4>
+                  <h4 id="bronzemedal"></h4>
+                </div>
+
+
+              </div>
+
+
+
+            </div>
+
+
+          </div>
+
+
+        </div>
       </div>
+
     </div>
-  </template>
+
+
+  </div>
 
   <!---------------------------------------------->
   <!-- Your own JavaScript functions go here    -->
   <!---------------------------------------------->
   <script src="./scripts/firebaseAPI_TEAM02.js"></script>
   <script src="./scripts/skeleton.js"></script>
-  <script src="./scripts/athletes.js"></script>
-  <!-- <script src="./scripts/script.js"></script> -->
+  <script src="./scripts/athletepage.js"></script>
 
   <script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
 
 </body>
 

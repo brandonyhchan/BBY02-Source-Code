@@ -2,9 +2,14 @@ var currentUser;
 firebase.auth().onAuthStateChanged(user => {
     if (user) {
         currentUser = db.collection("users").doc(user.uid);
-        console.log(currentUser);
-    }
+        // console.log(currentUser);
 
+        displayCards("Athletes")
+    } else {
+        // No user is signed in.
+        console.log("No user is signed in");
+        window.location.href = "loading.html";
+    }
 });
 
 function writeAthletes() {
@@ -123,18 +128,22 @@ function displayCards(collection) {
                 newcard.querySelector('.card-country').innerHTML = country;
                 newcard.querySelector('.card-event').innerHTML = events;
                 newcard.querySelector('.card-image').src = "./images/" + firstname + ".png";
+                newcard.querySelector('.card-image').onclick = function () {
+                    window.location.href = firstname + ".html";
+                }
 
                 newcard.querySelector('i').id = 'save-' + firstname;
-                newcard.querySelector('i').onclick = () => favoriteAthlete(firstname);
-
+                newcard.querySelector('i').onclick = () => favoriteAthlete(firstname);                
+                
                 //attach to gallery
                 document.getElementById(collection + "-go-here").appendChild(newcard);
                 i++;
             })
         })
+
 }
 
-displayCards("Athletes");
+// displayCards("Athletes");
 
 function favoriteAthlete(firstname) {
     currentUser.set({
@@ -147,4 +156,6 @@ function favoriteAthlete(firstname) {
             var iconID = 'save-' + firstname;
             document.getElementById(iconID).innerText = 'favorite';
         });
+
 }
+
