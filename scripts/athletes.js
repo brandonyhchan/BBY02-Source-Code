@@ -3,8 +3,13 @@ firebase.auth().onAuthStateChanged(user => {
     if (user) {
         currentUser = db.collection("users").doc(user.uid);
         console.log(currentUser);
-    }
 
+        displayCards("Athletes")
+    } else {
+        // No user is signed in.
+        console.log("No user is signed in");
+        window.location.href = "loading.html";
+    }
 });
 
 function writeAthletes() {
@@ -132,9 +137,10 @@ function displayCards(collection) {
                 i++;
             })
         })
+
 }
 
-displayCards("Athletes");
+// displayCards("Athletes");
 
 function favoriteAthlete(firstname) {
     currentUser.set({
@@ -148,3 +154,4 @@ function favoriteAthlete(firstname) {
             document.getElementById(iconID).innerText = 'favorite';
         });
 }
+
