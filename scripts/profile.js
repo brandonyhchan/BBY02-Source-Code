@@ -13,13 +13,17 @@ function populateInfo() {
                     //get the data fields of the user
                     var userName = userDoc.data().name;
                     var userEmail = userDoc.data().email;
-                    var userPhone;
+                    var userPassword = userDoc.data().password;
+
 
                     if (userName != null) {
                         document.getElementById("nameInput").value = userName;
                     }
                     if (userEmail != null) {
                         document.getElementById("emailInput").value = userEmail;
+                    }
+                    if (userPassword != null) {
+                        document.getElementById("passwordInput").value = userPassword;
                     }
                 })
         } else {
@@ -39,12 +43,13 @@ function editUserInfo() {
 function saveUserInfo() {
     userName = document.getElementById('nameInput').value;
     userEmail = document.getElementById('emailInput').value;
-    userPhone = document.getElementById('phoneInput').value;
+    userPhone = document.getElementById('passwordInput').value;
 
 
     currentUser.update({
         name: userName,
-        email: userEmail
+        email: userEmail,
+        password: userPassword
 
     })
         .then(() => {
