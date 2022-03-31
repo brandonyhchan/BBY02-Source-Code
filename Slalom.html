@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <meta name="comp1800 template" content="BBY-02 COMP1800 app">
+
+  <!------------------------>
+  <!-- Required meta tags -->
+  <!------------------------>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!------------------------------------------>
+  <!-- Bootstrap Library CSS JS CDN go here -->
+  <!------------------------------------------>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+  <!-------------------------------------------------------->
+  <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+  <!-------------------------------------------------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
+  <!-------------------------------------------->
+  <!-- Other libraries and styles of your own -->
+  <!-------------------------------------------->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" type="img/x-icon" href="./images/favicon.ico">
+  <link rel="stylesheet" href="./styles/athletestyle.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- nav -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    #eventcontainer{
+      background-color: #007bff;
+      width:95%;
+      height: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10%;
+    }
+    .writepart{
+      justify-content: right;
+      margin-left: 80%;
+      margin-top: 0%;
+    }
+    #athletespart{
+      background-color: white;
+      width:90%;
+      height: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .eventsimg{
+      margin-top: 23%;
+      margin-left: 7%;
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar"></nav>
+
+  <!-- Main Part -->
+  <section id="eventcontainer">
+    <div style="justify-content: left;">
+    <img src="./images/athelete.png" alt="" class="eventsimg" >
+    <div style="margin-left: 55%; margin-top: -45%;">
+    <h1 id="eventname"></h1>
+    <h4 id="sports" style="color:rgb(173, 173, 173);"></h4>
+    <h6 id="gender" style="color:rgb(173, 173, 173);"></h6>
+    <h6 id="location" style="color:rgb(173, 173, 173);"></h6>
+    <h6 id="date" style="color:rgb(173, 173, 173);"></h6>
+    <h6 id="time" style="color:rgb(173, 173, 173);"></h6>
+    <b><h6 id="type" style="color:rgb(173, 173, 173);"></h6></b>
+    </div>
+  </div>
+    <br>
+  <!-- Athletes -->
+  <section id="athletespart">
+<h2>PARTICIPANTS</h2>
+<br>
+<div id="AthletesTemplate">
+  <div class="card py-2 mx-2 my-2" style="width:90%;">
+    <img class="card-image" src="./images/athelete.png" alt="...">
+    <div class="card-body">
+      <h5 class="card-firstname"></h5>
+      <h5 class="card-lastname"></h5>
+      <p class="card-country">Country</p>
+      <p class="card-event">Event</p>
+      <i class="material-icons">favorite_border</i>
+    </div>
+  </div>
+</div>
+
+  </section>
+  </section>
+   <!---------------------------------------------->
+  <!-- Your own JavaScript functions go here    -->
+  <!---------------------------------------------->
+  <script src="./scripts/firebaseAPI_TEAM02.js"></script>
+  <script src="./scripts/skeleton.js"></script>
+  <script src="./scripts/athletes.js"></script>
+    <script src="./scripts/indiviadualevents.js"></script>
+  <!-- <script src="./scripts/script.js"></script> -->
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script href="./scripts/skeleton.js"></script>
+</body>
+</html>
