@@ -77,22 +77,23 @@ h2{
 }
 
 #eventlabel{
-    display:grid;
-    grid-template-columns: 15% 40% 45%;
+    display:inline-block;
 }
 
 #sport{
+    padding-top: 3%;
     text-align: left;
     margin: auto;
+    display: inline-block;
 }
 
 #eventpic{
-    max-width: 90%;
+    max-width: 18%;
+    display: inline-block;
 }
 
 #event{
-    padding-top: 3%;
-    padding-left: 17%;
+    padding-left: 19%;
 }
 
 #records{

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title id="pagename">Janice</title>
+  <title id="pagename">Slalom</title>
   <meta name="comp1800 template" content="BBY-02 COMP1800 app">
 
   <!------------------------>
@@ -42,7 +42,7 @@
   <!-- nav -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <link rel="stylesheet" href="./styles/athletepage.css">
+  <link rel="stylesheet" href="./styles/eventspage.css">
 
 </head>
 
@@ -52,91 +52,60 @@
   <div id="container">
 
     <div class="container align-content-center justify-content-center">
+
       <div class="card">
         <div class="card-body">
-          <div id="section1">
-            <img id="image" src=" " alt=" ">
-            <div id="basicinfo">
-              <h2 id="firstname"></h2>
-              <h2 id="lastname"></h2>
-
-              <div id="nation">
-                <img id="flag" src=" " alt=" ">
-                <h4 id="country"></h4>
-              </div>
-
-              <div id="old">
-                <h4 id="age_">Age:</h4>
-                <h4 id="age"></h4>
-              </div>
+          <div id="heading">
+            <img id="image" src="" alt="">
+            <div id="sportheading">
+              <h2 id="sport"></h2>
+              <h4 id="event"></h4>
               <h4 id="gender"></h4>
             </div>
           </div>
 
-          <div id="section2">
-
-            <div id="eventlabel">
-              <img id="eventpic" src=" " alt="">
-              <h4 id="sport"></h4>
-
-            </div>
-
-            <h4 id="event"></h4>
-
-            <div id="records">
-              <h3 id="recordheading">Previous Records:</h3>
-
-              <div id="medalsection">
-                <div id="goldmed">
-                  <img class="medalpic" src="./images/gold.png" alt="gold">
-                  <h4 class="medlabel">Gold: </h4>
-                  <h4 id="goldmedal"></h4>
-                </div>
-
-                <div id="silvermed">
-                  <img class="medalpic" src="./images/silver.png" alt="silver">
-                  <h4 class="medlabel">Silver: </h4>
-                  <h4 id="silvermedal"></h4>
-                </div>
-
-                <div id="bronzemed">
-                  <img class="medalpic" src="./images/bronze.png" alt="bronze">
-                  <h4 class="medlabel">Bronze: </h4>
-                  <h4 id="bronzemedal"></h4>
-                </div>
-
-
-              </div>
-
-
-
-            </div>
-
-
+          <div id="section1">
+            <h4 id="type"></h4>
+            <h4 id="date"></h4>
+            <h4 id="time"></h4>
+            <h4 id="location"></h4>
           </div>
 
-
+          <h3>Participants:</h3>
+          <div class="container align-content-center justify-content-center">
+            <div id="Athletes-go-here" class="row row-cols-auto justify-content-center">
+            </div>
+          </div>
         </div>
+
       </div>
-
     </div>
-
-
   </div>
+  </div>
+
+  <template id="AthletesTemplate">
+    <div class="card py-2 mx-2 my-2" style="width:90%;">
+      <img id="card-image" src=" ..." alt="...">
+      <div id="card-body">
+        <h5 id="card-firstname"></h5>
+        <h5 id="card-lastname"></h5>
+        <p id="card-country">Country</p>
+      </div>
+    </div>
+  </template>
 
   <!---------------------------------------------->
   <!-- Your own JavaScript functions go here    -->
   <!---------------------------------------------->
   <script src="./scripts/firebaseAPI_TEAM02.js"></script>
   <script src="./scripts/skeleton.js"></script>
-  <script src="./scripts/athletepage.js"></script>
+  <script src="./scripts/eventspage.js"></script>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
-
 
 </body>
 

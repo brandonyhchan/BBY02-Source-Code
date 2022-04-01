@@ -1,0 +1,30 @@
+#container{
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+#card-body{
+    display: flex;
+    justify-content: center;
+}
+
+#image{
+    max-width: 100%;
+
+}
+
+#heading{
+    display: grid;
+    grid-template-columns: 33% 67%;
+}
+
+#sportheading{
+    display: inline-block;
+}
+
+#section1{
+    margin-top: 7%;
+    margin-bottom: 10%;
+}
+
+

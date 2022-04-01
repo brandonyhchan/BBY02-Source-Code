@@ -16,6 +16,9 @@ function populatePage() {
                 document.getElementById("image").src = "./images/" + description.data().FirstName + ".png";
                 document.getElementById("flag").src = "./images/" + description.data().Country +".png";
                 document.getElementById("eventpic").src = "./images/" + description.data().ID + ".png";
+                document.getElementById("event").onclick = function(){
+                    window.location.href = description.data().Sport + ".html"
+                }
             })
     } else if (pageName == "Joo Hyuk"){
         db.collection("Athletes").doc("CptYFBoQA7gSKbJF2E8D")
@@ -33,6 +36,9 @@ function populatePage() {
             document.getElementById("image").src = "./images/" + description.data().FirstName + ".png";
             document.getElementById("flag").src = "./images/" + description.data().Country +".png";
             document.getElementById("eventpic").src = "./images/" + description.data().ID + ".png";
+            document.getElementById("event").onclick = function(){
+                window.location.href = description.data().Sport + ".html"
+            }
         })
     } else if (pageName == "Scott"){
         db.collection("Athletes").doc("EjyXYp4r3ZSdNKEnRgG3")
@@ -50,6 +56,9 @@ function populatePage() {
             document.getElementById("image").src = "./images/" + description.data().FirstName + ".png";
             document.getElementById("flag").src = "./images/" + description.data().Country +".png";
             document.getElementById("eventpic").src = "./images/" + description.data().ID + ".png";
+            document.getElementById("event").onclick = function(){
+                window.location.href = description.data().Sport + ".html"
+            }
         })
     } else if (pageName == "Himari"){
         db.collection("Athletes").doc("J3Hudfnv4UJ0IY8OIrRn")
@@ -67,6 +76,9 @@ function populatePage() {
             document.getElementById("image").src = "./images/" + description.data().FirstName + ".png";
             document.getElementById("japan").src = "./images/" + description.data().Country +".png";
             document.getElementById("eventpic").src = "./images/" + description.data().ID + ".png";
+            document.getElementById("event").onclick = function(){
+                window.location.href = description.data().Sport + ".html"
+            }
         })
     } else if (pageName == "Shawn"){
         db.collection("Athletes").doc("g4EDjoscIC4VhiPfelFh")
@@ -84,6 +96,9 @@ function populatePage() {
             document.getElementById("image").src = "./images/" + description.data().FirstName + ".png";
             document.getElementById("flag").src = "./images/" + description.data().Country +".png";
             document.getElementById("eventpic").src = "./images/" + description.data().ID + ".png";
+            document.getElementById("event").onclick = function(){
+                window.location.href = description.data().Sport + ".html"
+            }
         })
     } else if (pageName == "Tessa"){
         db.collection("Athletes").doc("qRUsH09i0w9IOkT3Dbx5")
@@ -101,6 +116,9 @@ function populatePage() {
             document.getElementById("image").src = "./images/" + description.data().FirstName + ".png";
             document.getElementById("flag").src = "./images/" + description.data().Country +".png";
             document.getElementById("eventpic").src = "./images/" + description.data().ID + ".png";
+            document.getElementById("event").onclick = function(){
+                window.location.href = description.data().Sport + ".html"
+            }
         })
     }
 }
