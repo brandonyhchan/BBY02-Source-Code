@@ -32,6 +32,10 @@ function getFavorites(user) {
                         newCard.querySelector('.card-country').innerHTML = country;
                         newCard.querySelector('.card-event').innerHTML = events;
                         newCard.querySelector('.card-image').src = "./images/" + firstname + ".png";
+                        newCard.querySelector('.card-image').onclick = function(){
+                            window.location.href = firstname + ".html"
+                        }
+
                         AthletesCardGroup.appendChild(newCard);
                     } 
 

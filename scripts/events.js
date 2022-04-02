@@ -1,3 +1,18 @@
+var currentUser;
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        currentUser = db.collection("users").doc(user.uid);
+        // console.log(currentUser);
+
+        displayCards("Events")
+    } else {
+        // No user is signed in.
+        console.log("No user is signed in");
+        window.location.href = "loading.html";
+    }
+});
+
+
 function writeEvents() {
     var eventsRef = db.collection("Events");
 
@@ -63,6 +78,7 @@ function displayCards(collection) {
                 var sport = doc.data().Sport;   
                 var event = doc.data().Event;  
                 var gender = doc.data().Gender; 
+                var type = doc.data().Type;
                 let newcard = cardTemplate.content.cloneNode(true);
                 var code = doc.data().ID;
 
@@ -70,7 +86,14 @@ function displayCards(collection) {
                 newcard.querySelector('.card-title').innerHTML = sport;
                 newcard.querySelector('.card-event').innerHTML = event;
                 newcard.querySelector('.card-gender').innerHTML = gender;
+                newcard.querySelector('.card-type').innerHTML = type;
                 newcard.querySelector('.card-image').src = "./images/" + code + ".png";
+                newcard.querySelector('.card-image').onclick = function () {
+                    window.location.href = sport + ".html"
+                }
+
+                newcard.querySelector('i').id = 'save-' + event;
+                newcard.querySelector('i').onclick = () => favoriteAthlete(event);
 
                 //attach to gallery
                 document.getElementById(collection + "-go-here").appendChild(newcard);
@@ -79,4 +102,16 @@ function displayCards(collection) {
         })
 }
 
-displayCards("Events");
+function favoriteAthlete(event) {
+    currentUser.set({
+        favoriteEvent: firebase.firestore.FieldValue.arrayUnion(event)
+    }, {
+        merge: true
+    })
+        .then(function () {
+            console.log("favorite event saved for: " + currentUser);
+            var iconID = 'save-' + event;
+            document.getElementById(iconID).innerText = 'favorite';
+        });
+
+}
