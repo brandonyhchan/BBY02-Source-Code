@@ -27,4 +27,42 @@
     margin-bottom: 10%;
 }
 
+.athcard{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: 2%;
+    padding: 2%;
+    border-style:solid;
+    border-width: 1px;
+    border-color: gainsboro;
+}
+
+.card-image{
+    max-width: 55%;
+    margin: auto;
+}
+
+.card-content{
+    margin-top: 0% !important; 
+    margin-bottom: 0% !important;
+}
+
+.card-firstname{
+    display: inline-block;
+    margin-bottom: 0% !important;
+}
+
+.card-lastname{
+    display: inline-block;
+    margin-bottom: 0% !important;
+}
+
+.card-country{
+    margin-bottom: 0%;
+}
+
+.card-body{
+    margin: 0% !important;
+}
 

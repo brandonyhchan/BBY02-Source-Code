@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title id="pagename">Cross</title>
+  <title id="pagename">Halfpipe</title>
   <meta name="comp1800 template" content="BBY-02 COMP1800 app">
 
   <!------------------------>
@@ -18,7 +18,7 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+  </script>
 
   <!-------------------------------------------------------->
   <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
@@ -43,8 +43,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="./styles/eventspage.css">
-  <!-- <link rel="stylesheet" href="./styles/athletepage.css"> -->
- 
 
 
 </head>
@@ -74,41 +72,46 @@
             <h4 id="location"></h4>
           </div>
 
-          <div id="container">
-            <h1>Athletes</h1>
-        
+          <div id="participants">
+            <h2>Participants:</h2>
+
             <div class="container align-content-center justify-content-center">
               <div id="Athletes-go-here" class="row row-cols-auto justify-content-center">
               </div>
             </div>
           </div>
-        
+
           <template id="AthletesTemplate">
-            <div class="card py-2 mx-2 my-2" style="width:90%;">
+            <div class="athcard">
               <img class="card-image" src=" ..." alt="...">
-              <div class="card-body">
-                <h5 class="card-firstname"></h5>
-                <h5 class="card-lastname"></h5>
+              <div class="card-content">
+                <h4 class="card-firstname"></h4>
+                <h4 class="card-lastname"></h4>
                 <p class="card-country">Country</p>
-                <p class="card-event">Event</p>
-                <i class="material-icons">favorite_border</i>
               </div>
             </div>
           </template>
 
-  <!---------------------------------------------->
-  <!-- Your own JavaScript functions go here    -->
-  <!---------------------------------------------->
-  <script src="./scripts/firebaseAPI_TEAM02.js"></script>
-  <script src="./scripts/skeleton.js"></script>
-  <script src="./scripts/eventspage.js"></script>
-  <script src="./scripts/Freestyleskiing.js"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<!---------------------------------------------->
+<!-- Your own JavaScript functions go here    -->
+<!---------------------------------------------->
+<script src="./scripts/firebaseAPI_TEAM02.js"></script>
+<script src="./scripts/skeleton.js"></script>
+<script src="./scripts/eventspage.js"></script>
+<script src="./scripts/Snowboarding.js"></script>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+
+
 
 </body>
 

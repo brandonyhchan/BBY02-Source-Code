@@ -9,22 +9,16 @@ function displayCards() {
                     var firstname = doc.data().FirstName;
                     var lastname = doc.data().LastName;
                     var country = doc.data().Country;
-                    var events = doc.data().Event;
                     let newcard = cardTemplate.content.cloneNode(true);
     
                     //update title and text and image
                     newcard.querySelector('.card-firstname').innerHTML = firstname;
                     newcard.querySelector('.card-lastname').innerHTML = lastname;
                     newcard.querySelector('.card-country').innerHTML = country;
-                    newcard.querySelector('.card-event').innerHTML = events;
                     newcard.querySelector('.card-image').src = "./images/" + firstname + ".png";
                     newcard.querySelector('.card-image').onclick = function () {
                         window.location.href = firstname + ".html";
                     }
-    
-                    newcard.querySelector('i').id = 'save-' + firstname;
-                    newcard.querySelector('i').onclick = () => favoriteAthlete(firstname);                
-                    
                     //attach to gallery
                     document.getElementById("Athletes-go-here").appendChild(newcard);
                     i++;
