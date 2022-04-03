@@ -44,6 +44,7 @@
 
   <link rel="stylesheet" href="./styles/eventspage.css">
 
+  
 </head>
 
 <body>
@@ -71,35 +72,40 @@
             <h4 id="location"></h4>
           </div>
 
-          <h3>Participants:</h3>
-          <div class="container align-content-center justify-content-center">
-            <div id="Athletes-go-here" class="row row-cols-auto justify-content-center">
+          <div id="container">
+            <h1>Athletes</h1>
+            
+            <div class="container align-content-center justify-content-center">
+              <div id="Athletes-go-here" class="row row-cols-auto justify-content-center">
+              </div>
             </div>
           </div>
-        </div>
-
-      </div>
-    </div>
+        
+          <template id="AthletesTemplate">
+            <div class="card py-2 mx-2 my-2" style="width:90%;">
+              <img class="card-image" src=" ..." alt="...">
+              <div class="card-body">
+                <h5 class="card-firstname"></h5>
+                <h5 class="card-lastname"></h5>
+                <p class="card-country">Country</p>
+                <p class="card-event">Event</p>
+                <i class="material-icons">favorite_border</i>
+              </div>
+            </div>
+          </template>
+</div>
+</div>
+</div>
   </div>
-  </div>
-
-  <template id="AthletesTemplate">
-    <div class="card py-2 mx-2 my-2" style="width:90%;">
-      <img id="card-image" src=" ..." alt="...">
-      <div id="card-body">
-        <h5 id="card-firstname"></h5>
-        <h5 id="card-lastname"></h5>
-        <p id="card-country">Country</p>
-      </div>
-    </div>
-  </template>
-
+  </body>
+  
   <!---------------------------------------------->
   <!-- Your own JavaScript functions go here    -->
   <!---------------------------------------------->
   <script src="./scripts/firebaseAPI_TEAM02.js"></script>
   <script src="./scripts/skeleton.js"></script>
   <script src="./scripts/eventspage.js"></script>
+  <script src="./scripts/AlpineSkiing.js"></script>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.min.js"></script>
@@ -107,6 +113,13 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
 
-</body>
+  <!-- Template Main JS File -->
+ <script src="assets/js/main.js"></script>
+ <script src="js/jquery.min.js"></script>
+ <script src="js/popper.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ <script src="js/main.js"></script>
+
+
 
 </html>

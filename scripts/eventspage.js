@@ -38,7 +38,7 @@ function populatePage() {
             document.getElementById("type").innerHTML = description.data().Type;
         })
     } else if (pageName == "Slalom"){
-        db.collection("Events").doc("CeNDes79bfVAh3VhXXr0")
+        db.collection("Events").doc("CeNDes79bfVAh3VhXXr0", "0caxgQuQCVRR4SnZxIIB")
         .onSnapshot(function (description) {
             document.getElementById("sport").innerHTML = description.data().Sport;
             document.getElementById("event").innerHTML = description.data().Event;
@@ -65,4 +65,6 @@ function populatePage() {
 
 }
 populatePage();
+
+
 
