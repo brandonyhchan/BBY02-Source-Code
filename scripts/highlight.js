@@ -11,6 +11,7 @@ function displayCards() {
                     let newcard = cardTemplate.content.cloneNode(true);
                     //update title and text and image
                     newcard.querySelector('.card-image').src = "./images/" + firstname + "pic1.jpg";
+                    newcard.querySelector('.card-desc').innerHTML = "Janice Zhang from China competing in 1500m Short Track, on her way to a silver medal!"
                     
                                         
                     //attach to gallery
@@ -40,7 +41,7 @@ function displayCards2() {
                     let newcard = cardTemplate.content.cloneNode(true);
                     //update title and text and image
                     newcard.querySelector('.card-image').src = "./images/" + firstname + "pic2.jpeg";
-                    
+                    newcard.querySelector('.card-desc').innerHTML = "Janice Zhang doing skaing drills with a little girl in her downtime"
                                         
                     //attach to gallery
                     document.getElementById("Athletes-go-here").appendChild(newcard);
