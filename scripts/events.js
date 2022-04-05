@@ -71,7 +71,9 @@ function writeEvents() {
 function displayCards(collection) {
     let cardTemplate = document.getElementById("EventsTemplate");
 
-    db.collection(collection).get()
+    db.collection(collection)
+        .orderBy("dateorder")
+        .get()
         .then(snap => {
             var i = 1;
             snap.forEach(doc => { 
@@ -79,6 +81,7 @@ function displayCards(collection) {
                 var event = doc.data().Event;  
                 var gender = doc.data().Gender; 
                 var type = doc.data().Type;
+                var date = doc.data().Date;
                 let newcard = cardTemplate.content.cloneNode(true);
                 var code = doc.data().ID;
 
@@ -87,6 +90,7 @@ function displayCards(collection) {
                 newcard.querySelector('.card-event').innerHTML = event;
                 newcard.querySelector('.card-gender').innerHTML = gender;
                 newcard.querySelector('.card-type').innerHTML = type;
+                newcard.querySelector('.card-date').innerHTML = date;
                 newcard.querySelector('.card-image').src = "./images/" + code + ".png";
                 newcard.querySelector('.card-image').onclick = function () {
                     window.location.href = sport + ".html"
