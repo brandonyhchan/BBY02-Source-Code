@@ -53,12 +53,14 @@
     <div id="container">
         <h1 style="text-align:center;">Favourites</h1>
 
+        <!-- Populated Athlete cards are inserted here -->
         <div class="container align-content-center justify-content-center">
             <h2 class="heading">Athletes</h2>
             <div id="AthletesCardGroup" class="row row-cols-auto justify-content-center">
             </div>
         </div>
-
+        
+        <!-- Popualted Event cards are inserted here -->
         <div class="container align-content-center justify-content-center" style="margin-top: 3%;">
             <h2 class="heading">Events</h2>
             <div id="EventsCardGroup" class="row row-cols-auto justify-content-center">
@@ -66,6 +68,7 @@
         </div>
     </div>
 
+    <!-- Template used in favorites.js to popualate events information -->
     <template id="AthletesTemplate">
         <div class="card py-2 mx-2 my-2" style="width:90%;">
             <img class="card-image" src=" ..." alt="...">
@@ -78,6 +81,7 @@
         </div>
     </template>
 
+    <!-- Template used in favorites.js to popualate the athletes information -->
     <template id="EventsTemplate">
         <div class="card py-2 mx-2 my-2" style="width:90%;">
             <img class="event-image" src=" ..." alt="...">

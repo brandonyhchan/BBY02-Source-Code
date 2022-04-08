@@ -22,6 +22,7 @@ firebase.auth().onAuthStateChanged(user => {
 *  console. 
 */
 function writeAthletes() {
+
     // create variable to quickly refer to the "Athletes" database
     var AthletesRef = db.collection("Athletes");
 
@@ -114,7 +115,7 @@ function writeAthletes() {
 /*
 * This function populates a template contained in "Athletes.html" for each athlete with
 * their first and last names, country, and the event they are competing in. There is also
-* a refernce to the favoriteAthlete function on line 155 that adds the favorited athlete to 
+* a refernce to the favoriteAthlete function on line 174 that adds the favorited athlete to 
 * an array in the "users" database, to be referenced in other pages of our app.
 *
 * Note that the parameter "collection" is defined in line 11 as the "Athletes" collection in firestore
@@ -124,12 +125,15 @@ function displayCards(collection) {
 
     // gets all elements from the "Athletes" collection in firestore
     db.collection(collection).get()
+
         // waits for line 124 and 126 to be completed before continuing
         .then(snap => {
             var i = 1;
+
             // for each element in the "Athletes" collection, will do the following lines:
             // doc parameter refers to each field in an athlete's document
             snap.forEach(doc => {
+
                 // create variables for first, last names, country and event for easy reference
                 var firstname = doc.data().FirstName;
                 var lastname = doc.data().LastName;
@@ -139,7 +143,7 @@ function displayCards(collection) {
                 // used to create a separate card for each athlete in the "Athletes" collection
                 let newcard = cardTemplate.content.cloneNode(true);
 
-                //Populates the card template with information from each athlete's document 
+                // Populates each card for each athlete based on the template with information from each athlete's document
                 newcard.querySelector('.card-firstname').innerHTML = firstname;
                 newcard.querySelector('.card-lastname').innerHTML = lastname;
                 newcard.querySelector('.card-country').innerHTML = country;
@@ -172,6 +176,7 @@ function displayCards(collection) {
 * The firstname parameter is defined on line 143, the athlete's firstname from the "Athletes" collection
 */
 function favoriteAthlete(firstname) {
+    
     // stores an array in the "users" collection 
     currentUser.set({
         favoriteath: firebase.firestore.FieldValue.arrayUnion(firstname)

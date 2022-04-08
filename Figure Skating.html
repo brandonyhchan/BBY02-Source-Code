@@ -18,7 +18,7 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-  </script>
+    </script>
 
   <!-------------------------------------------------------->
   <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
@@ -55,6 +55,7 @@
 
     <div class="container align-content-center justify-content-center">
 
+      <!-- Cards populated from eventspage.js are inserted here -->
       <div class="card">
         <div class="card-body">
           <div id="heading">
@@ -76,26 +77,32 @@
           <div id="participants">
             <h2>Participants:</h2>
 
+            <!-- Populated athlete cards from figureskating.js are inserted here -->
             <div class="container align-content-center justify-content-center">
               <div id="Athletes-go-here" class="row row-cols-auto justify-content-center">
               </div>
             </div>
+
           </div>
 
-          <template id="AthletesTemplate">
-            <div class="athcard">
-              <img class="card-image" src=" ..." alt="...">
-              <div class="card-content">
-                <h4 class="card-firstname"></h4>
-                <h4 class="card-lastname"></h4>
-                <p class="card-country">Country</p>
-              </div>
-            </div>
-          </template>
         </div>
       </div>
+
     </div>
+
   </div>
+
+  <!-- Template used in figureskating.js to populate the athletes information -->
+  <template id="AthletesTemplate">
+    <div class="athcard">
+      <img class="card-image" src=" ..." alt="...">
+      <div class="card-content">
+        <h4 class="card-firstname"></h4>
+        <h4 class="card-lastname"></h4>
+        <p class="card-country">Country</p>
+      </div>
+    </div>
+  </template>
 </body>
 
 <!---------------------------------------------->

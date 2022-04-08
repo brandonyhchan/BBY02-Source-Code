@@ -44,7 +44,7 @@
 
   <link rel="stylesheet" href="./styles/eventspage.css">
 
-  
+
 </head>
 
 <body>
@@ -53,7 +53,8 @@
   <div id="container">
 
     <div class="container align-content-center justify-content-center">
-
+      
+      <!-- Card is populated by functionality written in eventspage.js -->
       <div class="card">
         <div class="card-body">
           <div id="heading">
@@ -74,41 +75,49 @@
 
           <div id="participants">
             <h2>Participants:</h2>
-            
+
+            <!-- Card populated from template and AlpineSkiing.js goes here -->
             <div class="container align-content-center justify-content-center">
               <div id="Athletes-go-here" class="row row-cols-auto justify-content-center">
               </div>
             </div>
-          </div>
-        
-          <template id="AthletesTemplate">
-            <div class="athcard">
-              <img class="card-image" src=" ..." alt="...">
-              <div class="card-content">
-                <h4 class="card-firstname"></h4>
-                <h4 class="card-lastname"></h4>
-                <p class="card-country">Country</p>
-              </div>
-            </div>
-          </template>
-</div>
-</div>
-</div>
-  </div>
-  </body>
-  
-  <!---------------------------------------------->
-  <!-- Your own JavaScript functions go here    -->
-  <!---------------------------------------------->
-  <script src="./scripts/firebaseAPI_TEAM02.js"></script>
-  <script src="./scripts/skeleton.js"></script>
-  <script src="./scripts/eventspage.js"></script>
-  <script src="./scripts/AlpineSkiing.js"></script>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Template used in AlpineSkiing.js to popualate the athletes information -->
+  <template id="AthletesTemplate">
+    <div class="athcard">
+      <img class="card-image" src=" ..." alt="...">
+      <div class="card-content">
+        <h4 class="card-firstname"></h4>
+        <h4 class="card-lastname"></h4>
+        <p class="card-country">Country</p>
+      </div>
+    </div>
+  </template>
+
+</body>
+
+<!---------------------------------------------->
+<!-- Your own JavaScript functions go here    -->
+<!---------------------------------------------->
+<script src="./scripts/firebaseAPI_TEAM02.js"></script>
+<script src="./scripts/skeleton.js"></script>
+<script src="./scripts/eventspage.js"></script>
+<script src="./scripts/AlpineSkiing.js"></script>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
 
 </html>

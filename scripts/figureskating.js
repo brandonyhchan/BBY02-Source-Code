@@ -1,7 +1,16 @@
+/*
+* This function takes the template (with id #AthletesTemplate) from "Figure Skating.html" 
+* and populates the card with the Athletes participating in the event. 
+*/
 function displayCards() {
+
+    // referring to the template in "Figure Skating.html"
     let cardTemplate = document.getElementById("AthletesTemplate");
 
+    // returns information from the "Athletes" database in firestore
     db.collection("Athletes").get()
+
+        // all code after line 14 waits for line 8 and 11 to be completed before executing
         .then(snap => {
             var i = 1;
             snap.forEach(doc => {
