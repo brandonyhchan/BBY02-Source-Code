@@ -54,6 +54,7 @@
 
     <div class="container align-content-center justify-content-center">
 
+      <!-- Card is populated by functionality written in eventspage.js -->
       <div class="card">
         <div class="card-body">
           <div id="heading">
@@ -75,27 +76,33 @@
           <div id="participants">
             <h2>Participants:</h2>
 
+            <!-- Card populated from template and Snowboarding.js goes here -->
             <div class="container align-content-center justify-content-center">
               <div id="Athletes-go-here" class="row row-cols-auto justify-content-center">
               </div>
             </div>
           </div>
 
-          <template id="AthletesTemplate">
-            <div class="athcard">
-              <img class="card-image" src=" ..." alt="...">
-              <div class="card-content">
-                <h4 class="card-firstname"></h4>
-                <h4 class="card-lastname"></h4>
-                <p class="card-country">Country</p>
-              </div>
-            </div>
-          </template>
-
         </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+   <!-- Template used in Snowboarding.js to popualate the athletes information -->
+  <template id="AthletesTemplate">
+    <div class="athcard">
+      <img class="card-image" src=" ..." alt="...">
+      <div class="card-content">
+        <h4 class="card-firstname"></h4>
+        <h4 class="card-lastname"></h4>
+        <p class="card-country">Country</p>
       </div>
     </div>
-  </div>
+  </template>
+
 </body>
 <!---------------------------------------------->
 <!-- Your own JavaScript functions go here    -->
